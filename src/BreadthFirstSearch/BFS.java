@@ -1,4 +1,4 @@
-package com.adrient.BreadthFirstSearch;
+package BreadthFirstSearch;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -14,7 +14,7 @@ public class BFS {
 
         while (!queue.isEmpty()) {
             Vertex actualVertex = queue.remove();
-            System.out.println(actualVertex + " ");
+            System.out.println(actualVertex);
 
             for (Vertex v : actualVertex.getNeighbourList()) {
                 if (!v.isVisited()) {

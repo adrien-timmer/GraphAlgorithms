@@ -1,4 +1,4 @@
-package com.adrient.BreadthFirstSearch;
+package BreadthFirstSearch;
 
 public class App {
     public static void main(String[] args) {

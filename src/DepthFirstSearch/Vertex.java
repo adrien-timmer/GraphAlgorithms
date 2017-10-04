@@ -1,26 +1,29 @@
-package com.adrient.BreadthFirstSearch;
+package DepthFirstSearch;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Vertex {
 
-    private int data;
+    private String name;
     private boolean visited;
     private List<Vertex> neighbourList;
 
-    public Vertex(int data) {
-        this.data = data;
+    public Vertex(String name) {
+        this.name = name;
         this.neighbourList = new ArrayList<>();
     }
 
-
-    public int getData() {
-        return data;
+    public void addNeighbour(Vertex vertex) {
+        this.neighbourList.add(vertex);
     }
 
-    public void setData(int data) {
-        this.data = data;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public boolean isVisited() {
@@ -39,12 +42,8 @@ public class Vertex {
         this.neighbourList = neighbourList;
     }
 
-    public void addNeighbourVertext(Vertex vertex) {
-        this.neighbourList.add(vertex);
-    }
-
     @Override
     public String toString() {
-        return "" + this.data;
+        return this.name;
     }
 }
